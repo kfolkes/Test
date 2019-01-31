@@ -87,6 +87,7 @@ COPY plugins /home/site/wwwroot/plugins
 COPY server /home/site/wwwroot/server
 COPY static /home/site/wwwroot/static
 COPY store /home/site/wwwroot/store
+COPY startup /home/site/wwwroot/startup
 COPY nuxt.config.js /home/site/wwwroot/
 COPY hostingstart.html /home/site/wwwroot/
 COPY .eslintrc.js /home/site/wwwroot/
