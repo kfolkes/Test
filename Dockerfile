@@ -39,8 +39,9 @@ RUN sed -i 's/^\(tty\d\:\:\)/#\1/g' /etc/inittab \
     && sed -i 's/cgroup_add_service /# cgroup_add_service /g' /lib/rc/sh/openrc-run.sh \
     && sed -i 's/VSERVER/DOCKER/Ig' /lib/rc/sh/init.sh
 
+	
 # setup default site
-COPY startup /opt/startup
+COPY startup /opt/
 COPY hostingstart.html /opt/startup
 
 # configure startup
@@ -87,7 +88,6 @@ COPY plugins /home/site/wwwroot/plugins
 COPY server /home/site/wwwroot/server
 COPY static /home/site/wwwroot/static
 COPY store /home/site/wwwroot/store
-COPY startup /home/site/wwwroot/startup
 COPY nuxt.config.js /home/site/wwwroot/
 COPY hostingstart.html /home/site/wwwroot/
 COPY .eslintrc.js /home/site/wwwroot/
